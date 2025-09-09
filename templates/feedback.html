@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow">
+      <div class="card-body p-5">
+        {% if message %}
+          <h2 class="text-center mb-4">Thank You!</h2>
+          <p class="lead text-center">{{ message }}</p>
+        {% else %}
+          <h2 class="card-title text-center mb-4">We’d love your feedback</h2>
+          <form method="post">
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-primary w-100">Submit</button>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

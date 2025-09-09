@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+  <h1 class="display-4">Welcome, {{ username }}!</h1>
+  <p class="lead">We're thrilled to have you here.</p>
+  <p class="lead mt-4 text-success fw-semibold text-center">
+  This is my very first website built with <strong>Flask</strong>, and I’m super excited to share it with you! 🚀<br>
+  It has been a great learning experience, and I'm proud to see it all come together. <br>
+  I've added some clean styles and interactive elements to make the site more engaging and user-friendly. <br>
+  Your feedback means a lot — it’ll help me grow and build even better projects in the future!
+</p>
+
+  <p class="lead mt-4">
+    We're excited to have you on board! This platform is designed to give you a smooth and enjoyable experience as you explore everything we have to offer. Whether you're here to learn, connect, or share your thoughts — you've just joined a growing community that values your voice. Feel free to navigate around, and when you're ready, we'd love to hear your feedback. Let's make something great together!
+  </p>
+  <a href="{{ url_for('feedback') }}" class="btn btn-warning btn-lg mt-4">Give Feedback</a>
+</div>
+{% endblock %}
